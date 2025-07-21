@@ -1,7 +1,7 @@
 import argparse
-from whiterabbit.scrub.exif_cleaner import remove_exif
-from whiterabbit.scrub.timestamp_reset import reset_timestamps
-from whiterabbit.secure_delete.shredder import shred_file
+from scrub.exif_cleaner import remove_exif
+from scrub.timestamp_reset import reset_timestamps
+from secure_delete.shredder import shred_file
 
 def main():
     print("🐇 WhiteRabbit secure file tool invoked.")

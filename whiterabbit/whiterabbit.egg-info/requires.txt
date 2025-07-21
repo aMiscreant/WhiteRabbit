@@ -1,6 +1,0 @@
-Pillow
-piexif
-numpy
-cryptography
-requests
-flask

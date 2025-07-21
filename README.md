@@ -6,7 +6,7 @@
 **Anonymize. Obfuscate. Vanish.**
 
 WhiteRabbit is a Python toolkit for secure, high-fidelity data laundering.  
-It scrubs, obfuscates, and securely relays files through multi-hop encrypted networks — ideal for whistleblowers, forensic evasion, and paranoid privacy freaks.
+It scrubs, obfuscates, and securely relays files through multi-hop encrypted networks — forensic evasion, and paranoid privacy freaks.
 
 ---
 

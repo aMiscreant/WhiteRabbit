@@ -1,0 +1,2 @@
+[console_scripts]
+whiterabbit = whiterabbit.main:main

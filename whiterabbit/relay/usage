@@ -1,0 +1,17 @@
+if __name__ == "__main__":
+    # Example for a relay chain with 3 hops
+    hop_index = 0           # this server is first hop
+    total_hops = 3
+    next_hop_url = "http://127.0.0.1:5001"  # address of next hop server; None if last hop
+
+    server = RelayServer(address="0.0.0.0", port=5000, hop_index=hop_index,
+                         total_hops=total_hops, next_hop_url=next_hop_url)
+    server.start()
+
+    # Server will keep running in background thread
+    import time
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        print("Shutting down...")

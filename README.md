@@ -67,7 +67,7 @@ whiterabbit/
 
 python main.py shred sample_with_exif.jpg
 # 🐇 WhiteRabbit secure file tool invoked.
-# File sample_with_exif.jpg shredded with 3 pass
+...
 ```
 
 - Start the relay server.

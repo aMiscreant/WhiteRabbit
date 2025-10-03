@@ -10,7 +10,7 @@ It scrubs, obfuscates, and securely relays files through multi-hop encrypted net
 
 ---
 
-## 🔐 Features
+## Features
 
 | Module | Description |
 |--------|-------------|
@@ -22,7 +22,7 @@ It scrubs, obfuscates, and securely relays files through multi-hop encrypted net
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 python -m venv .venv
@@ -66,3 +66,35 @@ python main.py shred sample_with_exif.jpg
 # 🐇 WhiteRabbit secure file tool invoked.
 # File sample_with_exif.jpg shredded with 3 pass
 ```
+
+- Start the relay server.
+
+```python
+python main.py start-relay --host 127.0.0.1 --port 5000 --hop-index 0 --total-hops 1
+🐇 WhiteRabbit secure file tool invoked.
+...
+```
+
+- Send file to the relay server.
+
+```python
+python main.py send myfile.txt --hops http://127.0.0.1:5000
+🐇 WhiteRabbit secure file tool invoked.
+...
+```
+
+- Receive file from the relay server.
+        Note: the receive string will be outputted by the relay server.
+        
+        DEBUG:RelayServer:Received payload length: 48 bytes
+        DEBUG:RelayServer:Decrypted one layer, size: 20 bytes
+        INFO:RelayServer:Stored file with ID 767cf1769bd3962fa6910c7a08d707ce size 20 bytes
+
+
+```python
+python main.py receive 767cf1769bd3962fa6910c7a08d707ce recovered.txt --hops http://127.0.0.1:5000
+🐇 WhiteRabbit secure file tool invoked.
+...
+```
+
+---

@@ -60,6 +60,9 @@ whiterabbit/
 
 ### Examples
 
+
+- File sample_with_exif.jpg shredded with 3 pass.
+
 ```python
 
 python main.py shred sample_with_exif.jpg
